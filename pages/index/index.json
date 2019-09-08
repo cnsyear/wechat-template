@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "home": "/pages/basic/home/home",
+    "category": "/pages/basic/category/category",
+    "activity": "/pages/basic/activity/activity",
+    "cart": "/pages/basic/cart/cart",
+    "my": "/pages/basic/my/my"
+  }
 }

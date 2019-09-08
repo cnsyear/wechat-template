@@ -1,17 +1,36 @@
+<!--顶部导航栏，需开启自定义导航栏-->
 <!--<cu-custom bgColor="bg-gradual-blue">
   <view slot="content">小程序模板-自定义导航</view>
 </cu-custom>-->
-<view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
-  <view class="flex justify-center">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
-    <block wx:else>
-      <view class='text-center'>
-        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
-        <view class="padding">{{userInfo.nickName}}</view>
-      </view>
-    </block>
+
+<!--页面-->
+<home wx:if="{{PageCur=='home'}}"></home>
+<category wx:if="{{PageCur=='category'}}"></category>
+<activity wx:if="{{PageCur=='activity'}}"></activity>
+<cart wx:if="{{PageCur=='cart'}}"></cart>
+<my wx:if="{{PageCur=='my'}}"></my>
+
+<!--底部操作条-->
+<view class="cu-bar tabbar bg-white foot">
+  <view class="action {{PageCur=='home'?'text-green':'text-gray'}}" bindtap="NavChange" data-cur="home">
+    <view class="cuIcon-homefill"></view> 首页
   </view>
-</view>
-<view class="text-center margin-top">
-  <text class="text-grey text-xl">{{motto}}</text>
+  <view class="action {{PageCur=='category'?'text-green':'text-gray'}}" bindtap="NavChange" data-cur="category">
+    <view class="cuIcon-similar"></view> 分类
+  </view>
+  <view class="action {{PageCur=='activity'?'text-green':'text-gray'}}" bindtap="NavChange" data-cur="activity">
+    <view class="cuIcon-activity"></view> 活动
+  </view>
+  <view class="action {{PageCur=='cart'?'text-green':'text-gray'}}" bindtap="NavChange" data-cur="cart">
+    <view class="cuIcon-cart">
+      <view class="cu-tag badge">99</view>
+    </view>
+    购物车
+  </view>
+  <view class="action {{PageCur=='my'?'text-green':'text-gray'}}" bindtap="NavChange" data-cur="my">
+    <view class="cuIcon-my">
+      <view class="cu-tag badge"></view>
+    </view>
+    我的
+  </view>
 </view>

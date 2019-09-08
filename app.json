@@ -1,11 +1,16 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/basic/home/home",
+    "pages/basic/activity/activity",
+    "pages/basic/category/category",
+    "pages/basic/cart/cart",
+    "pages/basic/my/my"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "小程序模板",
+    "navigationBarTitleText": "微商城",
     "navigationStyle": "default",
     "navigationBarTextStyle": "black"
   },

@@ -15,7 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.8.2",
 	"appid": "wx5e96c3af8f421751",
-	"projectname": "app-demo",
+	"projectname": "wechat-template",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
